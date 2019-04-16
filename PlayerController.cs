@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float moveInput;
     SpriteRenderer sr;
     private Rigidbody2D rb;
+    private int[] arrayOefenen;
 
     private int extraJump;
     public int extraJumpValue;
@@ -28,6 +29,13 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         extraJump = extraJumpValue;
+        arrayOefenen = new int[10];
+        arrayOefenen[1] = 12;
+        arrayOefenen[4] = 65;
+        arrayOefenen[7] = 89;
+        for (int i = 0; i < arrayOefenen.Length; i++) {
+            Debug.Log(arrayOefenen[i]);
+        }
     }
 
     void Update()
